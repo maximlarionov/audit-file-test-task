@@ -1,0 +1,37 @@
+table.table.table-striped
+  thead
+    tr
+        th Name
+        th Attachment
+        th Actions
+
+  - documents.each do |document|
+    tr
+      td= document.name
+      td= document.attachment.url
+      td.actions
+        = link_to(document, class: 'btn') do
+          i.fi-eye.first
+          |  Show
+        a.fi-eye data-reveal-id="myModal" href="#"  Preview
+        #myModal.reveal-modal aria-hidden="true" aria-labelledby="modalTitle" data-reveal="" role="dialog"
+          h2#modalTitle Awesome. I have it.
+          p.lead Your couch.  It is mine.
+          p I'm a cool paragraph that lives inside of an even cooler modal. Wins!
+          a.close-reveal-modal aria-label="Close"  ×
+        = link_to(edit_document_path(document), class: 'btn') do
+          i.fi-pencil
+          |  Edit
+        = link_to(document, confirm: 'Are you sure?', method: :delete, class: 'btn btn-danger') do
+          i.fi-trash
+          |  Delete
+
+.paginator
+  = paginate(documents)
+
+br
+= link_to new_document_path, class: 'btn btn-primary' do
+  i.fi-plus
+  |  New Document
+
+
