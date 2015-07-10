@@ -5,12 +5,12 @@ class DocumentsController < ApplicationController
   expose(:documents) { Document.page(params[:page]) }
 
   def create
-    flash[:notice] = 'Document was successfully created.' if document.save
+    flash[:notice] = "Document was successfully created." if document.save
     respond_with(document)
   end
 
   def update
-    flash[:notice] = 'Document was successfully updated.' if document.save
+    flash[:notice] = "Document was successfully updated." if document.save
     respond_with(document)
   end
 

@@ -32,7 +32,7 @@ gem "rollbar", "~> 0.10.3"
 gem "seedbank"
 gem "thin"
 gem "pundit"
-gem 'carrierwave', github:'carrierwaveuploader/carrierwave'
+gem "carrierwave", github: "carrierwaveuploader/carrierwave"
 
 group :staging, :production do
   gem "rails_12factor"
