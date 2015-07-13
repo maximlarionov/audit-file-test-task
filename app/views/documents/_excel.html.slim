@@ -1,6 +1,10 @@
-- worksheet.each do |sheet|
-  .table
-    - row.each do |r|
-      .tr
-        - r.each do |cell|
-          .td = cell.val
+- document.attachment_ms_excel.worksheets.each do |worksheet|
+  table
+    tbody
+      - worksheet.sheet_data.each do |row|
+        tr
+          - row.each do |cell|
+            td = cell.try(:value) || ""
+br
+br
+br
