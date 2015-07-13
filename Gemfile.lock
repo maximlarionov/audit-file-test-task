@@ -122,6 +122,12 @@ GEM
       warden (~> 1.2.3)
     diff-lcs (1.2.5)
     docile (1.1.5)
+    docx (0.1.0)
+      nokogiri (~> 1.5)
+      rubyzip (~> 0.9)
+    docx-html (0.1.0)
+      docx (~> 0.1.0)
+      html_writer (~> 0.1.0)
     dotenv (0.9.0)
     dotenv-rails (0.9.0)
       dotenv (= 0.9.0)
@@ -158,6 +164,7 @@ GEM
     haml (4.0.6)
       tilt
     highline (1.6.21)
+    html_writer (0.1.0)
     i18n (0.7.0)
     interactor (3.1.0)
     jasmine (2.3.0)
@@ -288,6 +295,7 @@ GEM
       sexp_processor (~> 4.0)
     ruby_parser (3.6.6)
       sexp_processor (~> 4.1)
+    rubyzip (0.9.9)
     safe_yaml (1.0.1)
     sass (3.4.13)
     sass-rails (5.0.3)
@@ -386,6 +394,7 @@ DEPENDENCIES
   database_cleaner
   decent_exposure
   devise
+  docx-html
   dotenv-rails
   email_spec
   factory_girl_rails
