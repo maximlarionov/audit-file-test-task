@@ -33,6 +33,7 @@ gem "seedbank"
 gem "thin"
 gem "pundit"
 gem "carrierwave", github: "carrierwaveuploader/carrierwave"
+gem "yomu"
 
 group :staging, :production do
   gem "rails_12factor"

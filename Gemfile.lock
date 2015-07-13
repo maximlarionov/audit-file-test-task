@@ -364,6 +364,7 @@ GEM
       crack (>= 0.3.2)
     xpath (2.0.0)
       nokogiri (~> 1.3)
+    yomu (0.1.5)
 
 PLATFORMS
   ruby
@@ -427,6 +428,7 @@ DEPENDENCIES
   uglifier (>= 1.3.0)
   web-console (~> 2.0)
   webmock
+  yomu
 
 BUNDLED WITH
    1.10.5
