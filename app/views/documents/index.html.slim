@@ -10,9 +10,9 @@ table.table.table-striped
       td= document.attachment.file.filename
       td= document.attachment.url
       td.actions
-        = link_to(document, class: 'btn') do
-          i.fi-eye.first
-          |  Show
+        / = link_to(document, class: 'btn') do
+        /   i.fi-eye.first
+        /   |  Show
         a.fi-eye data-reveal-id="myModal" href="#"  Preview
         #myModal.reveal-modal aria-hidden="true" aria-labelledby="modalTitle" data-reveal="" role="dialog"
           = render "word", document: document
