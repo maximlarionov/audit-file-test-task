@@ -5,18 +5,22 @@ require "docx/html"
 class Document < ActiveRecord::Base
   mount_uploader :attachment, AttachmentUploader
 
-  def content
-    yomu.text
-  end
-
   def content_docx
-    docx.to_html
+    if attachment_is_docx?
+      docx.to_html
+    else
+      yomu.text.gsub("\n", "<br/>")
+    end
   end
 
   private
 
+  def attachment_is_docx?
+    File.extname(attachment.current_path) == ".docx"
+  end
+
   def docx
-    Docx::Document.open(Document.first.attachment.current_path)
+    Docx::Document.open(attachment.current_path)
   end
 
   def yomu

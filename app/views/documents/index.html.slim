@@ -10,14 +10,8 @@ table.table.table-striped
       td= document.attachment.file.filename
       td= document.attachment.url
       td.actions
-        / = link_to(document, class: 'btn') do
-        /   i.fi-eye.first
-        /   |  Show
-        / = link_to(edit_document_path(document), class: 'btn') do
-        /   i.fi-pencil
-        /   |  Edit
-        a.fi-eye data-reveal-id="myModal" href="#"  Preview
-        #myModal.reveal-modal aria-hidden="true" aria-labelledby="modalTitle" data-reveal="" role="dialog"
+        a.fi-eye data-reveal-id="myModal#{document.id}" href="#"  Preview
+        div.reveal-modal id="myModal#{document.id}" aria-hidden="true" aria-labelledby="modalTitle" data-reveal="" role="dialog"
           = render "word", document: document
           a.close-reveal-modal aria-label="Close"  ×
         = link_to(document, confirm: 'Are you sure?', method: :delete, class: 'btn btn-danger') do
