@@ -35,6 +35,7 @@ gem "pundit"
 gem "carrierwave", github: "carrierwaveuploader/carrierwave"
 gem "yomu"
 gem "docx-html"
+gem "rubyXL"
 
 group :staging, :production do
   gem "rails_12factor"

@@ -293,6 +293,7 @@ GEM
     ruby2ruby (2.1.4)
       ruby_parser (~> 3.1)
       sexp_processor (~> 4.0)
+    rubyXL (1.2.10)
     ruby_parser (3.6.6)
       sexp_processor (~> 4.1)
     rubyzip (0.9.9)
@@ -421,6 +422,7 @@ DEPENDENCIES
   rollbar (~> 0.10.3)
   rspec-rails (~> 3.0)
   rubocop
+  rubyXL
   sass-rails (~> 5.0.0)
   scss_lint
   seedbank
