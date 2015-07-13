@@ -6,7 +6,7 @@ class DocumentsController < ApplicationController
 
   def create
     flash[:notice] = "Document was successfully created." if document.save
-    respond_with(document)
+    redirect_to documents_path
   end
 
   def update
