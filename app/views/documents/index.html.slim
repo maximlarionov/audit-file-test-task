@@ -12,7 +12,10 @@ table.table.table-striped
       td.actions
         a.fi-eye data-reveal-id="myModal#{document.id}" href="#"  Preview
         div.reveal-modal id="myModal#{document.id}" aria-hidden="true" aria-labelledby="modalTitle" data-reveal="" role="dialog"
-          = render "word", document: document
+          - if accepted_word_formats.include? document.extension
+            = render "word", document: document
+          - else
+            = render "excel", document: document
           a.close-reveal-modal aria-label="Close"  ×
         = link_to(document, confirm: 'Are you sure?', method: :delete, class: 'btn btn-danger') do
           i.fi-trash

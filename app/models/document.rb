@@ -13,6 +13,10 @@ class Document < ActiveRecord::Base
     end
   end
 
+  def extension
+    File.extname(attachment.current_path)
+  end
+
   private
 
   def attachment_is_docx?
