@@ -1,0 +1,6 @@
+- worksheet.each do |sheet|
+  .table
+    - row.each do |r|
+      .tr
+        - r.each do |cell|
+          .td = cell.val
