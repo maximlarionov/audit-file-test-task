@@ -1,10 +1,11 @@
-require "yomu"
-require "docx"
-require "docx/html"
-require 'rubyXL'
-
 class Document < ActiveRecord::Base
   mount_uploader :attachment, AttachmentUploader
+
+  # validates_presence_of :remote_attachment_url, unless: :has_local_attachment?
+
+  def name
+    attachment.file.filename
+  end
 
   def content_ms_word
     if attachment_is_docx?
@@ -26,17 +27,17 @@ class Document < ActiveRecord::Base
   end
 
   def extension
-    File.extname(attachment.current_path)
+    File.extname(attachment.current_path.to_s)
   end
 
   private
 
   def attachment_is_docx?
-    File.extname(attachment.current_path) == ".docx"
+    File.extname(attachment.current_path.to_s) == ".docx"
   end
 
   def attachment_is_xlsx?
-    File.extname(attachment.current_path) == ".xlsx"
+    File.extname(attachment.current_path.to_s) == ".xlsx"
   end
 
   def xlsx_document

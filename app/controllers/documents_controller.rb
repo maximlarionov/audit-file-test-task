@@ -6,7 +6,7 @@ class DocumentsController < ApplicationController
 
   def create
     flash[:notice] = "Document was successfully created." if document.save
-    redirect_to documents_path
+    respond_with(document)
   end
 
   def update
@@ -22,6 +22,6 @@ class DocumentsController < ApplicationController
   private
 
   def document_params
-    params.require(:document).permit(:name, :attachment)
+    params.require(:document).permit(:name, :attachment, :remote_attachment_url)
   end
 end
