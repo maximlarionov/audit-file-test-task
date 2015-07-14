@@ -1,8 +1,6 @@
 class Document < ActiveRecord::Base
   mount_uploader :attachment, AttachmentUploader
 
-  # validates_presence_of :remote_attachment_url, unless: :has_local_attachment?
-
   def name
     attachment.file.filename
   end
@@ -20,9 +18,6 @@ class Document < ActiveRecord::Base
       xlsx_document
     else
       yomu.text
-        .gsub("\n\n\n", "<br/><br/><hr/>")
-        .gsub("\n\n", "<br/><br/>")
-        .gsub("\n", "<br/>")
     end
   end
 
