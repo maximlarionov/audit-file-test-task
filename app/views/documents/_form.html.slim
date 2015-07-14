@@ -2,7 +2,8 @@
   = simple_form_for(document) do |f|
     .form-inputs
       = f.file_field :attachment
-
+      | Or attach url
+      = f.text_field :remote_attachment_url
     .form-actions
       = f.button :submit
       '  or
