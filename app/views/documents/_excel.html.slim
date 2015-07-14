@@ -1,10 +1,15 @@
-- document.attachment_ms_excel.worksheets.each do |worksheet|
-  table
-    tbody
-      - worksheet.sheet_data.each do |row|
-        tr
-          - row.each do |cell|
-            td = cell.try(:value) || ""
-br
-br
-br
+- if document.extension == ".xls"
+  .xls
+    = sanitize document.attachment_ms_excel
+- else
+  .xlsx
+    - document.attachment_ms_excel.worksheets.each do |worksheet|
+      table
+        tbody
+          - worksheet.sheet_data.each do |row|
+            tr
+              - row.each do |cell|
+                td = cell.try(:value) || ""
+    br
+    br
+    br
