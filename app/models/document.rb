@@ -9,7 +9,8 @@ class Document < ActiveRecord::Base
     if attachment_is_docx?
       docx_document.to_html
     else
-      yomu.text.gsub("\n", "<br/>")
+      yomu.text
+      # .gsub("\n", "<br/>")
     end
   end
 
