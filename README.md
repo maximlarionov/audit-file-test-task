@@ -1,12 +1,10 @@
 # Test Task
 
-# Rails Base
-
 [![Build Status](https://semaphoreapp.com/api/v1/projects/31b68af8b073708a56e4e005bbcba2af4802816d/76140/shields_badge.png)](https://semaphoreapp.com/fs/rails-base)
 [![Test Coverage](https://codeclimate.com/github/fs/rails-base/badges/coverage.svg)](https://codeclimate.com/github/fs/rails-base)
 [![Code Climate](https://codeclimate.com/github/fs/rails-base.png)](https://codeclimate.com/github/fs/rails-base)
 
-Rails Base is the base Rails application template used at Flatstack.
+Document Viewer is the base Rails application template used at Flatstack.
 It's based on Rails 4 and Ruby 2.2.2.
 
 ## Application Gems
@@ -133,8 +131,7 @@ brew bundle
 
 ## Credits
 
-Rails Base is maintained by [Timur Vafin](http://github.com/timurvafin).
-It was written by [Flatstack](http://www.flatstack.com) with the help of our
-[contributors](http://github.com/fs/rails-base/contributors).
+
+Document Viewer was created by [Maxim Larionov](http://github.com/maximlarionov) as a test task by [Flatstack](http://www.flatstack.com) for AuditFile
 
 [![Flatstack](https://avatars0.githubusercontent.com/u/15136?v=2&s=200)](http://www.flatstack.com)
