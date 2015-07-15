@@ -1,29 +1,30 @@
-table.table.table-striped
-  thead
-    tr
-        th Name
-        th Attachment
-        th Actions
+.row
+  table.table.table-striped
+    thead
+      caption
+        span.table_name= "My Documents"
+        span.new_doc= link_to new_document_path, class: 'btn btn-primary' do
+          i.fi-plus
+          |  New Document
+      tr
+          th Name
+          th Attachment
+          th Actions
 
-  - documents.each do |document|
-    tr
-      td= document.name
-      td= document.attachment.url
-      td.actions
-        a.fi-eye data-reveal-id="myModal#{document.id}" href="#"  Preview
-        div.reveal-modal id="myModal#{document.id}" aria-hidden="true" aria-labelledby="modalTitle" data-reveal="" role="dialog"
-          = render "document", document: document
-          a.close-reveal-modal aria-label="Close"  ×
-        = link_to(document, confirm: 'Are you sure?', method: :delete, class: 'btn btn-danger') do
-          i.fi-trash
-          |  Delete
+    - documents.each do |document|
+      tr
+        td= document.name
+        td= document.attachment.url
+        td.actions
+          a.fi-eye data-reveal-id="myModal#{document.id}" href="#"  Preview
+          div.reveal-modal id="myModal#{document.id}" aria-hidden="true" aria-labelledby="modalTitle" data-reveal="" role="dialog"
+            = render "document", document: document
+            a.close-reveal-modal aria-label="Close"  ×
+          = link_to(document, confirm: 'Are you sure?', method: :delete, class: 'btn btn-danger') do
+            i.fi-trash
+            |  Delete
 
-.paginator
-  = paginate(documents)
-
-br
-= link_to new_document_path, class: 'btn btn-primary' do
-  i.fi-plus
-  |  New Document
+  .paginator
+    = paginate(documents)
 
 
