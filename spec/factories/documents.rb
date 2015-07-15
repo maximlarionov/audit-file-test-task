@@ -6,7 +6,7 @@ FactoryGirl.define do
     attachment Rack::Test::UploadedFile.new(
       File.open(
         File.join(
-          Rails.root, '/spec/fixtures/document-docx.docx')))
+          Rails.root, "/spec/fixtures/document-docx.docx")))
   end
 
   factory :document_doc, class: Document do
@@ -14,7 +14,7 @@ FactoryGirl.define do
     attachment Rack::Test::UploadedFile.new(
       File.open(
         File.join(
-          Rails.root, '/spec/fixtures/document-doc.doc')))
+          Rails.root, "/spec/fixtures/document-doc.doc")))
   end
   # factory :document_xlsx, class: Document do
   #   name "MyString"
