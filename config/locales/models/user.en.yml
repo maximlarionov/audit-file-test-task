@@ -1,7 +1,0 @@
-en:
-  active_record:
-    models:
-      user:
-    attributes:
-      user:
-        full_name:
