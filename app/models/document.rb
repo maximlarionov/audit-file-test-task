@@ -10,7 +10,6 @@ class Document < ActiveRecord::Base
       docx_document.to_html
     else
       yomu.text
-      # .gsub("\n", "<br/>")
     end
   end
 

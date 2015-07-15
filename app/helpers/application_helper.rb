@@ -1,5 +1,5 @@
 module ApplicationHelper
-  def accepted_word_formats
+  def word_formats
     %w(.doc .docx)
   end
 end
