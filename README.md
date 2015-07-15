@@ -1,8 +1,7 @@
 # Test Task
 
 [![Build Status](https://semaphoreapp.com/api/v1/projects/31b68af8b073708a56e4e005bbcba2af4802816d/76140/shields_badge.png)](https://semaphoreapp.com/fs/rails-base)
-[![Test Coverage](https://codeclimate.com/github/fs/rails-base/badges/coverage.svg)](https://codeclimate.com/github/fs/rails-base)
-[![Code Climate](https://codeclimate.com/github/fs/rails-base.png)](https://codeclimate.com/github/fs/rails-base)
+![Heroku](https://heroku-badge.herokuapp.com/?app=audit-file-document-viewer)
 
 Document Viewer is the base Rails application template used at Flatstack.
 It's based on Rails 4 and Ruby 2.2.2.
