@@ -21,6 +21,10 @@ table {
   }
 }
 
+.fi-eye {
+  margin-right: 6px;
+}
+
 .table-name {
   @include new_font($white, 100);
 
