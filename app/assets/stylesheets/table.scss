@@ -1,0 +1,45 @@
+$table-color: #3c3f4b;
+$white: #fff;
+
+@mixin new_font($color, $weight) {
+  color: $color;
+  font-family: sans-serif;
+  font-weight: $weight;
+}
+
+table {
+  margin-top: 120px;
+  margin-right: auto;
+  margin-left: auto;
+
+  caption {
+    height: 40px;
+
+    border-radius: 2px;
+    background-color: $table-color;
+  }
+}
+
+.table-name {
+  @include new_font($white, 100);
+
+  float: left;
+
+  margin-top: 7px;
+  margin-left: 5px;
+}
+
+.new-doc {
+  @include new_font($white, 100);
+
+  float: right;
+}
+
+.button.tiny {
+  margin: 0;
+  padding: 12px;
+
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight: 100;
+}

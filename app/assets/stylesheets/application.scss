@@ -3,22 +3,9 @@
 
 // Vendor libraries
 @import "foundation-icons";
+@import "table";
+@import "document";
 
 // Inbox
 // The inbox allows developers, and those not actively working on the CSS,
 // to quickly add styles that are easily seen by the maintainer of the file.
-
-i,
-.fi-eye {
-  padding-right: 0;
-  padding-left: 10px;
-
-  &.first {
-    padding-left: 0;
-  }
-}
-
-.xls,
-.word {
-  white-space: pre-wrap;
-}
