@@ -31,8 +31,34 @@ table {
 
 .table_name {
   float: left;
+  color: white;
+  font-family: sans-serif;
+  font-weight: 100;
+  margin-top: 7px;
+  margin-left: 5px;
 }
 
 .new_doc {
   float: right;
+  color: white;
+  font-family: sans-serif;
+  font-weight: 100;
+}
+
+footer {
+  text-align: center;
+}
+
+table caption {
+  background-color: #3c3f4b;
+  border-radius: 2px;
+  height: 40px;
+}
+
+.button.tiny {
+  padding: 12px;
+  font-size: 14px;
+  font-family: sans-serif;
+  font-weight: 100;
+  margin: 0;
 }

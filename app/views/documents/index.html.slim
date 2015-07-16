@@ -3,12 +3,11 @@
     thead
       caption
         span.table_name= "My Documents"
-        span.new_doc= link_to new_document_path, class: 'btn btn-primary' do
-          i.fi-plus
+        span.new_doc= link_to new_document_path, class: 'button tiny'
           |  New Document
       tr
           th Name
-          th Attachment
+          th Path
           th Actions
 
     - documents.each do |document|
