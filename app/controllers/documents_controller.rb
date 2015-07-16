@@ -4,6 +4,9 @@ class DocumentsController < ApplicationController
   expose(:document, attributes: :document_params)
   expose(:documents) { Document.page(params[:page]) }
 
+  expose(:document_presenter) { DocumentPresenter.wrap(document) }
+  expose(:documents_presenter) { DocumentPresenter.wrap(documents) }
+
   def create
     flash[:notice] = "Document was successfully created." if document.save
     respond_with(document)
