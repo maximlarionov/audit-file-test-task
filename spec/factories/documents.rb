@@ -16,19 +16,12 @@ FactoryGirl.define do
         File.join(
           Rails.root, "/spec/fixtures/document-doc.doc")))
   end
-  # factory :document_xlsx, class: Document do
-  #   name "MyString"
-  #   attachment Rack::Test::UploadedFile.new(
-  #     File.open(
-  #       File.join(
-  #         Rails.root, '/spec/fixtures/document-docx.docx')))
-  # end
 
-  # factory :document_xls, class: Document do
-  #   name "MyString"
-  #   attachment Rack::Test::UploadedFile.new(
-  #     File.open(
-  #       File.join(
-  #         Rails.root, '/spec/fixtures/document-docx.docx')))
-  # end
+  factory :document_xlsx, class: Document do
+    name "MyString"
+    attachment Rack::Test::UploadedFile.new(
+      File.open(
+        File.join(
+          Rails.root, "/spec/fixtures/document-xlsx.xlsx")))
+  end
 end
