@@ -6,10 +6,9 @@
         span.new-doc= link_to new_document_path, class: 'button tiny'
           |  New Document
       tr
-          th Name
-          th Path
-          th Actions
-
+        th Name
+        th Path
+        th Actions
     - documents_presenter.each do |document|
       tr
         td= document.name
