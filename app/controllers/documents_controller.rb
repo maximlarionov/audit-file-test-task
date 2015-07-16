@@ -8,8 +8,12 @@ class DocumentsController < ApplicationController
   expose(:documents_presenter) { DocumentPresenter.wrap(documents) }
 
   def create
-    flash[:notice] = "Document was successfully created." if document.save
-    respond_with(document)
+    if document.save
+      flash[:notice] = "Document was successfully created."
+      redirect_to documents_path
+    else
+      respond_with(document)
+    end
   end
 
   def update
