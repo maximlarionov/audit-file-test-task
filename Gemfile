@@ -34,7 +34,6 @@ gem "thin"
 gem "pundit"
 gem "carrierwave"
 gem "yomu"
-gem "docx-html"
 gem "rubyXL"
 
 group :staging, :production do

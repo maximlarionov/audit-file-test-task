@@ -17,11 +17,7 @@ class DocumentPresenter < BasePresenter
   end
 
   def content_ms_word
-    if attachment_is_docx?
-      docx_document.to_html
-    else
-      yomu.text
-    end
+    yomu.text
   end
 
   def attachment_ms_excel
@@ -52,10 +48,6 @@ class DocumentPresenter < BasePresenter
 
   def xlsx_document
     RubyXL::Parser.parse(attachment.current_path)
-  end
-
-  def docx_document
-    Docx::Document.open(attachment.current_path)
   end
 
   def yomu

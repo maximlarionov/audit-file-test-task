@@ -5,12 +5,12 @@
   .xlsx
     - document.attachment_ms_excel.worksheets.each do |worksheet|
       h3 = worksheet.sheet_name
-      table
+      table.excel-table
         tbody
           - worksheet.sheet_data.each do |row|
             tr
               - row.each do |cell|
-                td = cell.try(:value) || ""
+                td.excel-cell = cell.try(:value) || ""
       br
       br
       br
