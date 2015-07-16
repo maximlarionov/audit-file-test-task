@@ -4,4 +4,6 @@ class Document < ActiveRecord::Base
   scope :by_newest, -> { order("created_at DESC") }
 
   default_scope { by_newest }
+
+  validates_with AttachmentValidator
 end
