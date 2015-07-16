@@ -3,62 +3,9 @@
 
 // Vendor libraries
 @import "foundation-icons";
+@import "table";
+@import "document";
 
 // Inbox
 // The inbox allows developers, and those not actively working on the CSS,
 // to quickly add styles that are easily seen by the maintainer of the file.
-
-i,
-.fi-eye {
-  padding-right: 0;
-  padding-left: 10px;
-
-  &.first {
-    padding-left: 0;
-  }
-}
-
-.xls,
-.word {
-  white-space: pre-wrap;
-}
-
-table {
-  margin-top: 120px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.table_name {
-  float: left;
-  color: white;
-  font-family: sans-serif;
-  font-weight: 100;
-  margin-top: 7px;
-  margin-left: 5px;
-}
-
-.new_doc {
-  float: right;
-  color: white;
-  font-family: sans-serif;
-  font-weight: 100;
-}
-
-footer {
-  text-align: center;
-}
-
-table caption {
-  background-color: #3c3f4b;
-  border-radius: 2px;
-  height: 40px;
-}
-
-.button.tiny {
-  padding: 12px;
-  font-size: 14px;
-  font-family: sans-serif;
-  font-weight: 100;
-  margin: 0;
-}
