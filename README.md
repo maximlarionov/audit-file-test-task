@@ -85,46 +85,28 @@ brew bundle
 
 ### Bootstrap application
 
-1. Clone application as new project with original repository named "rails-base". We use depth parameter here in order not to copy the history of changes in base project
+1. Clone application as new project with original repository named "audit-file-test-task".
 
    ```bash
-   git clone --depth 1 git://github.com/fs/rails-base.git --origin rails-base [MY-NEW-PROJECT]
+   git clone git://github.com/fs/audit-file-test-task.git
    ```
 
-2. Create your new repo on GitHub and push master into it. Make sure master branch is tracking origin repo.
-
-  ```bash
-  git remote add origin git@github.com:[MY-GITHUB-ACCOUNT]/[MY-NEW-PROJECT].git
-  git push -u origin master
-  ```
-
-3. Run setup script
+2. Run setup script
 
   ```bash
   bin/setup
   ```
 
-4. Run test and quality suits to make sure all dependencies are satisfied and applications works correctly before making changes.
+3. Run test and quality suits to make sure all dependencies are satisfied and applications works correctly before making changes.
 
   ```bash
   bin/ci
   ```
 
-5. Run app
+4. Run app
 
   ```bash
   bin/server
-  ```
-
-6. Update README
-
-  Do not forget to update application `README.md` file with detailed information based on the
-  existing template.
-
-  ```bash
-  mv doc/README_TEMPLATE.md README.md
-  # update README.md
-  git commit -am "Update README.md"
   ```
 
 ## Credits
