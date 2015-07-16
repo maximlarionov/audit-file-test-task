@@ -3,7 +3,7 @@
     thead
       caption
         span.table-name= "My Documents"
-        span.new-doc= link_to new_document_path, class: 'button tiny'
+        span.new-doc= link_to new_document_path, class: "button tiny"
           |  New Document
       tr
         th Name
@@ -15,13 +15,9 @@
         td= document.path
 
         td.actions
-          a.fi-eye data-reveal-id="myModal#{document.id}" href="#"  Preview
-
-          div.reveal-modal id="myModal#{document.id}" aria-hidden="true" aria-labelledby="modalTitle" data-reveal="" role="dialog"
-            = render "document", document: document
-            a.close-reveal-modal aria-label="Close"  ×
-
-          = link_to(document, confirm: 'Are you sure?', method: :delete, class: 'btn btn-danger') do
+          = link_to " Preview", document_path(document.id), class: "fi-eye"
+          br
+          = link_to(document, confirm: "Are you sure?", method: :delete, class: "btn btn-danger") do
             i.fi-trash
             |  Delete
 

@@ -1,4 +1,5 @@
-- if word_formats.include? document.extension
-  = render "word", document: document
-- else
-  = render "excel", document: document
+.row
+  - if word_formats.include? document.extension
+    = render "word", document: document
+  - else
+    = render "excel", document: document
