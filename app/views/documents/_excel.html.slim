@@ -7,10 +7,10 @@
       h3 = worksheet.sheet_name
       table.excel-table
         tbody
-          - worksheet.sheet_data.each do |row|
+          - worksheet.extract_data.try(:each) do |row|
             tr
-              - row.each do |cell|
-                td.excel-cell = cell.try(:value) || ""
+              - row.try(:each) do |cell|
+                td.excel-cell = cell || ""
       br
       br
       br
