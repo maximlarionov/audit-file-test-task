@@ -9,6 +9,14 @@ describe DocumentsController do
     }
   end
 
+  let(:invalid_params) do
+    { document:
+      { attachment: Rack::Test::UploadedFile.new(
+        File.open(File.join(Rails.root, "/spec/fixtures/document-doc.pdf"))
+      ) }, format: :html
+    }
+  end
+
   subject { response }
 
   describe "#index" do
@@ -32,15 +40,19 @@ describe DocumentsController do
       it { expect(response.status).to eq(200) }
     end
 
-    # context "with invalid params" do
-    #   subject { post :create, document: { attachment: nil } }
+    context "with invalid params" do
+      def do_create
+        post :create, document: invalid_params
+      end
 
-    #   it "does not create new document" do
-    #     expect { subject }.not_to change { Document.count }
-    #   end
+      subject { do_create }
 
-    #   it { is_expected.to render_template(:new) }
-    # end
+      it "does not create new document" do
+        expect { subject }.not_to change { Document.count }
+      end
+
+      it { is_expected.to render_template(:new) }
+    end
   end
 
   describe "#destroy" do
